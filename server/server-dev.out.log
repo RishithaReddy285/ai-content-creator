@@ -1,0 +1,26 @@
+
+> ai-content-summarizer-server@1.0.0 dev
+> nodemon src/index.js
+
+[33m[nodemon] 2.0.22[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,json[39m
+[32m[nodemon] starting `node src/index.js`[39m
+MongoDB connected: ac-rfusohf-shard-00-01.gjhwxy7.mongodb.net/ai_summarizer
+Server running on port 5000
+[0mGET / [33m404[0m 12.619 ms - 139[0m
+[0mGET / [33m404[0m 3.029 ms - 139[0m
+[0mGET / [33m404[0m 0.912 ms - 139[0m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/index.js`[39m
+MongoDB connected: ac-rfusohf-shard-00-01.gjhwxy7.mongodb.net/ai_summarizer
+Server running on port 5000
+[0mGET /api/health [32m200[0m 2.212 ms - 15[0m
+[0mGET / [32m200[0m 0.360 ms - 143[0m
+[0mGET /api/health [32m200[0m 0.741 ms - 15[0m
+[0mGET /favicon.ico [33m404[0m 11.211 ms - 150[0m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/index.js`[39m
+MongoDB connected: ac-rfusohf-shard-00-01.gjhwxy7.mongodb.net/ai_summarizer
+Server running on port 5000

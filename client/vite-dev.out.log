@@ -1,0 +1,27 @@
+
+> ai-content-summarizer-client@1.0.0 dev
+> vite --host 0.0.0.0
+
+
+  [32m[1mVITE[22m v5.4.21[39m  [2mready in [0m[1m455[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://40.0.44.158:[1m5173[22m/[39m
+[2m3:14:11 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/styles.css[22m
+[2m3:14:17 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.jsx, /src/styles.css[22m
+[2m3:14:33 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Nav.jsx, /src/styles.css[22m
+[2m3:14:47 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Footer.jsx, /src/styles.css[22m
+[2m3:14:53 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Footer.jsx[22m
+[2m3:14:57 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Home.jsx, /src/styles.css[22m
+[2m3:15:55 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Home.jsx[22m
+[2m3:15:59 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Dashboard.jsx, /src/styles.css[22m
+[2m3:16:32 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Dashboard.jsx[22m
+[2m3:16:39 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/History.jsx, /src/styles.css[22m
+[2m3:17:05 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/History.jsx[22m
+[2m3:17:08 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/SummaryResult.jsx, /src/styles.css[22m
+[2m3:17:39 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/SummaryResult.jsx[22m
+[2m3:17:42 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Login.jsx, /src/styles.css[22m
+[2m3:18:06 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Login.jsx[22m
+[2m3:18:08 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Register.jsx, /src/styles.css[22m
+[2m3:18:34 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Register.jsx[22m
+[2m3:19:36 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Nav.jsx, /src/styles.css[22m

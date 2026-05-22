@@ -1,0 +1,201 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color: #172033;
+    background: #f4f7fb;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+
+  html,
+  body,
+  #root {
+    min-height: 100%;
+  }
+
+  body {
+    margin: 0;
+    background:
+      linear-gradient(135deg, rgba(15, 98, 254, 0.08), transparent 34%),
+      linear-gradient(225deg, rgba(27, 153, 139, 0.12), transparent 32%),
+      #f4f7fb;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+}
+
+@layer components {
+  .app-container {
+    width: min(1180px, calc(100% - 32px));
+    margin: 0 auto;
+  }
+
+  .brand-mark {
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #0f62fe, #20a39e);
+    color: white;
+    font-weight: 800;
+    box-shadow: 0 12px 28px rgba(15, 98, 254, 0.24);
+  }
+
+  .surface {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(126, 146, 174, 0.22);
+    box-shadow: 0 20px 60px rgba(27, 39, 64, 0.08);
+    backdrop-filter: blur(16px);
+  }
+
+  .nav-link {
+    color: #5c6b82;
+    font-weight: 700;
+    transition: color 160ms ease, background 160ms ease;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    color: #0f62fe;
+  }
+
+  .field {
+    width: 100%;
+    border: 1px solid #d8e0ea;
+    border-radius: 12px;
+    background: #ffffff;
+    padding: 0.8rem 0.95rem;
+    color: #172033;
+    outline: none;
+    transition: border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+  }
+
+  .field:focus {
+    border-color: #0f62fe;
+    box-shadow: 0 0 0 4px rgba(15, 98, 254, 0.12);
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 44px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #0f62fe, #20a39e);
+    color: white;
+    font-weight: 800;
+    padding: 0.75rem 1.1rem;
+    box-shadow: 0 14px 32px rgba(15, 98, 254, 0.22);
+    transition: transform 160ms ease, box-shadow 160ms ease, opacity 160ms ease;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 18px 40px rgba(15, 98, 254, 0.28);
+  }
+
+  .btn-primary:disabled {
+    cursor: not-allowed;
+    opacity: 0.68;
+    transform: none;
+    box-shadow: none;
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    border-radius: 12px;
+    border: 1px solid #d8e0ea;
+    background: #ffffff;
+    color: #24324a;
+    font-weight: 800;
+    padding: 0.65rem 1rem;
+    transition: border-color 160ms ease, color 160ms ease, transform 160ms ease;
+  }
+
+  .btn-secondary:hover {
+    border-color: #0f62fe;
+    color: #0f62fe;
+    transform: translateY(-1px);
+  }
+
+  .mode-tab {
+    min-height: 42px;
+    border-radius: 12px;
+    padding: 0.62rem 0.9rem;
+    color: #5c6b82;
+    font-weight: 800;
+    transition: background 160ms ease, color 160ms ease, box-shadow 160ms ease;
+  }
+
+  .mode-tab.active {
+    background: #ffffff;
+    color: #0f62fe;
+    box-shadow: 0 8px 20px rgba(27, 39, 64, 0.08);
+  }
+
+  .metric-card {
+    border-radius: 18px;
+    border: 1px solid rgba(126, 146, 174, 0.22);
+    background: #ffffff;
+    padding: 1rem;
+    box-shadow: 0 14px 40px rgba(27, 39, 64, 0.06);
+  }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    background: #edf4ff;
+    color: #0a4ebf;
+    font-size: 0.78rem;
+    font-weight: 800;
+    padding: 0.35rem 0.7rem;
+  }
+
+  .insight-board {
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    border: 1px solid rgba(126, 146, 174, 0.22);
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(244, 247, 251, 0.86)),
+      repeating-linear-gradient(90deg, rgba(15, 98, 254, 0.06) 0 1px, transparent 1px 68px);
+    box-shadow: 0 24px 70px rgba(27, 39, 64, 0.1);
+  }
+
+  .insight-board::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg, transparent 0 18%, rgba(32, 163, 158, 0.08) 18% 19%, transparent 19% 100%),
+      linear-gradient(180deg, transparent 0 34%, rgba(15, 98, 254, 0.08) 34% 35%, transparent 35% 100%);
+    pointer-events: none;
+  }
+
+  .mini-bar {
+    height: 8px;
+    border-radius: 999px;
+    background: #d7e2f2;
+    overflow: hidden;
+  }
+
+  .mini-bar > span {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #0f62fe, #20a39e);
+  }
+}
