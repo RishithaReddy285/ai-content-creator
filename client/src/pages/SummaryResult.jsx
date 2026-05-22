@@ -15,8 +15,7 @@ export default function SummaryResult() {
   useEffect(() => {
     async function fetchSummary() {
       try {
-        const token = localStorage.getItem('token')
-        const resp = await axios.get(`/api/history/${id}`, { headers: { Authorization: `Bearer ${token}` } })
+        const resp = await axios.get(`/api/history/${id}`)
         setData(resp.data.data)
       } catch (err) {
         toast.error('Unable to fetch summary')

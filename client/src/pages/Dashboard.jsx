@@ -13,8 +13,7 @@ export default function Dashboard() {
   useEffect(() => {
     async function load() {
       try {
-        const token = localStorage.getItem('token')
-        const resp = await axios.get('/api/history', { headers: { Authorization: `Bearer ${token}` } })
+        const resp = await axios.get('/api/history')
         setItems(resp.data.data || [])
       } catch (err) {
         toast.error('Unable to load dashboard')

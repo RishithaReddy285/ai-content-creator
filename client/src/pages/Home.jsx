@@ -41,17 +41,9 @@ export default function Home() {
 
   async function handleSubmit(e) {
     e.preventDefault()
-    const token = localStorage.getItem('token')
-
-    if (!token) {
-      toast.info('Login to save summaries and history')
-      navigate('/login')
-      return
-    }
 
     try {
       setLoading(true)
-      const headers = { Authorization: `Bearer ${token}` }
       let resp
 
       if (mode === 'text') {
@@ -59,7 +51,7 @@ export default function Home() {
           toast.error('Add text before summarizing')
           return
         }
-        resp = await axios.post('/api/summaries/text', { content, summaryLength, language, tone }, { headers })
+        resp = await axios.post('/api/summaries/text', { content, summaryLength, language, tone })
       }
 
       if (mode === 'url') {
@@ -67,7 +59,7 @@ export default function Home() {
           toast.error('Add a URL before summarizing')
           return
         }
-        resp = await axios.post('/api/summaries/url', { url, summaryLength, language, tone }, { headers })
+        resp = await axios.post('/api/summaries/url', { url, summaryLength, language, tone })
       }
 
       if (mode === 'file') {
@@ -80,7 +72,7 @@ export default function Home() {
         formData.append('summaryLength', summaryLength)
         formData.append('language', language)
         formData.append('tone', tone)
-        resp = await axios.post('/api/summaries/upload', formData, { headers })
+        resp = await axios.post('/api/summaries/upload', formData)
       }
 
       toast.success('Summary generated')

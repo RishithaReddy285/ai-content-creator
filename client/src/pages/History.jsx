@@ -15,8 +15,7 @@ export default function History() {
 
   async function fetchList() {
     try {
-      const token = localStorage.getItem('token')
-      const resp = await axios.get('/api/history', { headers: { Authorization: `Bearer ${token}` } })
+      const resp = await axios.get('/api/history')
       setItems(resp.data.data || [])
     } catch (err) {
       toast.error('Failed to load history')
@@ -28,8 +27,7 @@ export default function History() {
   async function handleDelete(id) {
     if (!confirm('Delete this summary?')) return
     try {
-      const token = localStorage.getItem('token')
-      await axios.delete(`/api/history/${id}`, { headers: { Authorization: `Bearer ${token}` } })
+      await axios.delete(`/api/history/${id}`)
       toast.success('Deleted')
       setItems(items.filter(i => i._id !== id))
     } catch (err) {

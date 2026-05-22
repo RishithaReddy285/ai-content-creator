@@ -2,14 +2,11 @@
 // Folder: client/src/App.jsx
 
 import React from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Navigate, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
-import Login from './pages/Login'
-import Register from './pages/Register'
 import Dashboard from './pages/Dashboard'
 import SummaryResult from './pages/SummaryResult'
 import History from './pages/History'
-import ProtectedRoute from './components/ProtectedRoute'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
 import { ToastContainer } from 'react-toastify'
@@ -22,11 +19,11 @@ export default function App() {
       <main className="flex-grow w-full py-8 md:py-10">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/dashboard" element={<ProtectedRoute><Dashboard/></ProtectedRoute>} />
-          <Route path="/result/:id" element={<ProtectedRoute><SummaryResult/></ProtectedRoute>} />
-          <Route path="/history" element={<ProtectedRoute><History/></ProtectedRoute>} />
+          <Route path="/login" element={<Navigate to="/" replace />} />
+          <Route path="/register" element={<Navigate to="/" replace />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/result/:id" element={<SummaryResult />} />
+          <Route path="/history" element={<History />} />
         </Routes>
       </main>
       <Footer />
